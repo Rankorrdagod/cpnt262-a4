@@ -1,5 +1,6 @@
 # cpnt262-a4
 ### Evan Burton
+https://github.com/Rankorrdagod/cpnt262-a4
 ## Instructions for CLI use
 The CLI used is pulled from the data in the OpenWeather API, and should pull the current weather, longitude and latitude for ANY city you enter (provided it is in the database).
 - Example: "node app.js Hongkong" (this will return with information on Hongkong)
