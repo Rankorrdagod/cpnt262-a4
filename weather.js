@@ -1,6 +1,6 @@
 const https = require("https");
 const {key} = require("./env.json");
-
+const chalk = require('chalk');
 function fetchWeather(cityName) {
     const queryParams = {
         appid: key,
@@ -24,8 +24,8 @@ const name = data.name;
 const temp = data.main.temp;
 const lon = data.coord.lon;
 const lat = data.coord.lat;
-
-console.log("The temperature in " + name + " is " + temp +" located at longitude:"+ lon +" and latitude:"+lat);
+const log = console.log;
+log(chalk.blue("The temperature in "+ chalk.yellow(name) + " is " + temp +chalk.green(" located at longitude:"+ lon) + chalk.red(" and latitude:"+lat)));
                 });
 
             } else{
