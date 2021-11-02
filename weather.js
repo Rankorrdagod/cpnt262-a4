@@ -5,6 +5,7 @@ function fetchWeather(cityName) {
     const queryParams = {
         appid: key,
         city: cityName,
+    
     };
 console.log(queryParams)
     const url = "https://api.openweathermap.org/data/2.5/weather?q="+queryParams.city+"&appid="+queryParams.appid;
@@ -21,7 +22,10 @@ console.log(queryParams)
 const data = JSON.parse(body);
 const name = data.name;
 const temp = data.main.temp;
-console.log("The temperature in " + name + " is " + temp);
+const lon = data.coord.lon;
+const lat = data.coord.lat;
+
+console.log("The temperature in " + name + " is " + temp +" located at longitude:"+ lon +" and latitude:"+lat);
                 });
 
             } else{
